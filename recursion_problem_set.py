@@ -34,10 +34,9 @@ def h(balance, index, payed):
     balance -= 100
     if balance <= 0:
         payed = True
-        print("It took", index, "")
-    if not payed and index < 100:
+        print("It took", index, "months")
+    if not payed and index < 1000:
         h(balance, index + 1, False)
-
 h(10000, 1, False)
 
 
