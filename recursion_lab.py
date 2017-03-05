@@ -40,7 +40,7 @@ def rectangle(x, y, distance):
     for i in range(90, 410, 45):
         my_turtle.setheading(i)
         my_turtle.forward(distance)
-    rectangle(x-10, y-10, distance - 10)
+    rectangle(x-10, y, distance - 10)
 
 rectangle(270, -110, 230)
 
