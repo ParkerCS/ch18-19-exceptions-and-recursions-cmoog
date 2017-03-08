@@ -13,6 +13,7 @@ import turtle
 
 def octo(x, y, distance):
     my_turtle = turtle.Turtle()
+    my_turtle.speed(0)
     my_turtle.showturtle()
     my_screen = turtle.Screen()
     my_screen.bgcolor("blue")
