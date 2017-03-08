@@ -35,9 +35,13 @@ def h(balance, index, payed):
     if balance <= 0:
         payed = True
         print("It took", index, "months")
-    if not payed and index < 1000:
-        h(balance, index + 1, False)
-h(1000, 1, False)
+    if not payed:
+        try:
+            h(balance, index + 1, False)
+        except:
+            print("After", index, "months, the balance was not payed and was", balance, "dollars")
+
+h(10000, 1, False)
 
 #4  Pyramid of Cubes - (10pts) If you stack boxes in a pyramid, the top row would have 1 box, the second row would have two, the third row would have 3 and so on.  Make a recursive function which calculates the TOTAL NUMBER OF BOXES for a pyramid of boxes n high.  For instance, a pyramid that is 3 high would have a total of 6 boxes.  A pyramid 4 high would have 10.
 
